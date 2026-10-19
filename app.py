@@ -93,7 +93,8 @@ def format_money(amount):
 
 st.title("Movie Recommendation System")
 
-movie_list = df["title"].sort_values().unique()
+popular_movies = df[df["vote_count"] >= 20]
+movie_list = popular_movies["title"].sort_values().unique()
 selected_movie = st.selectbox(
     "Search for a movie:",
     options=movie_list,
