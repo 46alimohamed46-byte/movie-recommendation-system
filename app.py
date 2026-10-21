@@ -4,7 +4,7 @@ import pandas as pd
 import requests
 from sklearn.metrics.pairwise import linear_kernel
 
-TMDB_API_KEY = "5edcdbd29ff7f608cca52112cec96703"
+TMDB_API_KEY = st.secrets["TMDB_API_KEY"]
 
 st.set_page_config(page_title="Movie Recommender", page_icon="🎬", layout="wide")
 
